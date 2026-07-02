@@ -457,7 +457,7 @@ section {
 .skill-panel {
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: 24px 24px 26px;
+  padding:16px;
 }
 
 .skill-panel:hover {
