@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>This Portfolio — Jada Guerzoni</title>
+<title>FPT-AI project — Jada Guerzoni</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="Portofolio.css">
 </head>
 <body>
@@ -19,7 +20,9 @@
 <header>
   <nav class="nav">
     <a href="Portofolio.html#top" class="nav-mark">JG<span>.</span></a>
-    <button class="nav-toggle mono" id="navToggle" aria-label="Open menu" aria-expanded="false">[ ≡ ]</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <img class="nav-toggle-icon" src="icons/dehaze_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="Portofolio.html#skills">Skills</a></li>
       <li><a href="Portofolio.html#projects">Projects</a></li>
@@ -33,7 +36,7 @@
     <div class="wrap">
       <a class="back-link" href="Portofolio.html#projects">← Back to projects</a>
       <h1>Automatic construction progress monitoring FPT-AI</h1>
-      <p class="project-tagline">A computer vision application that analyzes UAV footage and compares it with a 3D structural model to automatically monitor construction progress.</p>
+      <!-- <p class="project-tagline">A computer vision application that analyzes UAV footage and compares it with a 3D structural model to automatically monitor construction progress.</p> -->
 
       <div class="meta-row">
         <div class="meta-item"><div class="k">Year</div><div class="v">2026</div></div>
@@ -48,14 +51,14 @@
       <div class="project-body-grid">
         <div class="content-block reveal project-body-copy">
           <h2>Overview</h2>
-          <p>FPT-AI is a progress-monitoring concept that connects aerial video analysis with a 3D model so construction status can be checked more automatically.</p>
+          <p>This project focuses on automating construction progress monitoring using UAV (drone) footage and a 3D structural model. By applying computer vision techniques, the system detects structural elements such as beams and columns, aligns them with the digital 3D model, and estimates the current construction progress. The final result is a visual report showing completed, partially completed, and unfinished structural components, reducing the need for manual on-site inspections.</p>
 
           <h2>Pipeline</h2>
           <ul>
             <li>UAV footage is processed through a computer-vision pipeline</li>
             <li>Point cloud data is compared against the BIM / structural model</li>
             <li>Mast3r-slam and related AI tooling support the alignment and analysis</li>
-            <li>Unity and C# are used to present or integrate the result visually</li>
+            <li>Unity and C# are used to map out the drone flight path/li>
           </ul>
 
           <h2>Why it matters</h2>

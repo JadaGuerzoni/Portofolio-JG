@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JG">
+  <rect width="64" height="64" rx="14" fill="#0a0b14"/>
+  <path d="M9 52h46" stroke="#49e0d2" stroke-width="3" stroke-linecap="round" opacity=".72"/>
+  <text x="9" y="43" fill="#f1f0f7" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="1">JG</text>
+  <circle cx="54" cy="44" r="4" fill="#8b6bff"/>
+</svg>
