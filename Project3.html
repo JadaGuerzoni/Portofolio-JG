@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR Car mechanic — Jada Guerzoni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Portofolio.css">
+</head>
+<body>
+
+<div class="hud-corner tl"></div>
+<div class="hud-corner tr"></div>
+<div class="hud-corner bl"></div>
+<div class="hud-corner br"></div>
+
+<header>
+  <nav class="nav">
+    <a href="Portofolio.html#top" class="nav-mark">JG<span>.</span></a>
+    <button class="nav-toggle mono" id="navToggle" aria-label="Open menu" aria-expanded="false">[ ≡ ]</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Portofolio.html#skills">Skills</a></li>
+      <li><a href="Portofolio.html#projects">Projects</a></li>
+      <li><a href="Portofolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="wrap">
+      <a class="back-link" href="Portofolio.html#projects">← Back to projects</a>
+      <h1>VR Car mechanic</h1>
+      <p class="project-tagline">An immersive VR application where users repair vehicles through realistic interactions, developed in Unity with a focus on learning and usability.</p>
+
+      <div class="meta-row">
+        <div class="meta-item"><div class="k">Year</div><div class="v">2026</div></div>
+        <div class="meta-item"><div class="k">Type</div><div class="v">VR project</div></div>
+        <div class="meta-item"><div class="k">Stack</div><div class="tag-row"><span class="tag">C#</span><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">XR Interaction Toolkit</span><span class="tag">VR Development</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-compact">
+    <div class="wrap">
+      <div class="project-body-grid">
+        <div class="content-block reveal project-body-copy">
+          <h2>Overview</h2>
+          <p>This project explores how car repair tasks can be translated into VR interactions so the player feels like they are actually working inside the scene instead of just selecting menu options.</p>
+
+          <h2>Interaction mechanics</h2>
+          <ul>
+            <li>Hands-on repair actions with grab, inspect and place interactions</li>
+            <li>Unity-based VR controls focused on clarity for new users</li>
+            <li>Blender assets integrated into the scene to support the mechanic theme</li>
+            <li>XR Interaction Toolkit for the core interaction layer</li>
+          </ul>
+
+          <h2>Design focus</h2>
+          <p>The main goal was usability: every interaction needed to be readable enough that someone could understand the repair flow quickly, while still feeling like a VR task rather than a tutorial.</p>
+        </div>
+
+        <div class="project-cover-link project-body-visual">
+          <div class="project-cover"><img src="Images/Car-mechanics.png" alt="VR Car mechanic project screenshot"></div>
+        </div>
+      </div>
+
+      <div class="project-nav">
+        <a href="Project4.html">← FPT-AI</a>
+        <a href="Portofolio.html#projects">All projects</a>
+        <a href="Project2.html">TagRun →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-wrap">
+    <span>© 2026 Jada Guerzoni</span>
+    <span><a href="https://www.linkedin.com/in/jada-guerzoni-0a101541a/" class="accent-link" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com/JadaGuerzoni" class="accent-link" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
